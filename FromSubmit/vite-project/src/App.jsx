@@ -28,13 +28,13 @@ function App() {
           <button>Submit</button>
         </form> */}
 
-        {/* <form action="" onSubmit={(e)=>{e.preventDefault()}}>
+        <form action="" onSubmit={(e)=>{e.preventDefault()}}>
           <input onChange={(e)=>{inputOnChange('FastName',e.target.value)}} type="text" placeholder='Your Fast Name?' /><br /><br />
           <input onChange={(e)=>{inputOnChange('LastName',e.target.value)}} type="text" placeholder='Your Last Name?' /><br /><br />
           <input onChange={(e)=>{inputOnChange('Emainl',e.target.value)}} type="text" placeholder='Your Email Name?' /><br /><br />
           <input onChange={(e)=>{inputOnChange('Pass',e.target.value)}} type="text" placeholder='Your Pass?' /><br /><br />
           <button>Submit</button>
-        </form> */}
+        </form>
       </section>
     </>
   )
