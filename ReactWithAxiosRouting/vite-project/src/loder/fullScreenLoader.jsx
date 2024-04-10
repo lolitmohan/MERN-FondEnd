@@ -1,15 +1,16 @@
 import React from 'react';
-import loder from '../assets/img/lodinganimated.svg'
-const fullScreenLoader = () => {
+import loader from '../assets/img/lodinganimations.svg'
+
+const FullScreenLoader = () => {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-2">
-                    <img className='w-100' src={loder} alt='lolit'/>
+        <div style={{zIndex:"100",position:"fixed",marginTop:"100px"}} className="container-fluid bg-white">
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-3">
+                      <img className="w-100" src={loader}/>
                 </div>
             </div>
         </div>
     );
 };
 
-export default fullScreenLoader;
+export default FullScreenLoader;
