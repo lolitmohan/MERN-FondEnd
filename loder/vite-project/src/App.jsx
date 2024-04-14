@@ -1,11 +1,18 @@
 import React from 'react';
-import loder from './assets/img/lodinganimated.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './Pages/HomePage';
+import ProfilePage from './Pages/ProfilePage';
+import ContactPage from './Pages/ContactPage';
 
 const App = () => {
   return (
-    <div>
-      <img src={loder} alt="" />
-    </div>
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/ProfilePage' element={<ProfilePage/>}/>
+            <Route path='/ContactPage/:city/:age/:number' element={<ContactPage/>}/>
+          </Routes>
+      </BrowserRouter>  
   );
 };
 
