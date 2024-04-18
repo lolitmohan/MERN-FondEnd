@@ -2,8 +2,14 @@ import React from 'react';
 
 const FullScreenLoader = () => {
     return (
-        <div>
-            
+        <div className='container mt-5'>
+            <div className="row d-flex justify-content-center">
+                <div className="col-12 loder">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

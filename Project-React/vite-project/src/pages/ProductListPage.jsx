@@ -1,5 +1,6 @@
 import React from 'react';
 import MasterLayout from '../components/MasterLayout';
+import ProductLIst from '../components/ProductLIst';
 
 const ProductListPage = () => {
     return (
@@ -7,7 +8,7 @@ const ProductListPage = () => {
             <div className="row">
                 <div className="col-12">
                     <MasterLayout>
-                        <h1>ProductList Page</h1>
+                        <ProductLIst/>
                     </MasterLayout>
                 </div>
             </div>
