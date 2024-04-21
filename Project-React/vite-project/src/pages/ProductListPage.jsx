@@ -1,6 +1,6 @@
-import React from 'react';
+
 import MasterLayout from '../components/MasterLayout';
-import ProductLIst from '../components/ProductLIst';
+import ProductLIst from "../components/ProductLIst.jsx";
 
 const ProductListPage = () => {
     return (

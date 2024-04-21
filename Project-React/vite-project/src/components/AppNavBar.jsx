@@ -5,7 +5,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/img/lp loogo.jpg'
 import { NavLink } from 'react-router-dom';
 import ValidetionHelper from '../utility/Validetion';
+
 const AppNavBar = () => {
+
+    const Logout=()=>{
+        sessionStorage.clear()
+        window.location.href="/"
+    }
+
     return (
       <div className="container">
         <div className="row">
@@ -20,27 +27,26 @@ const AppNavBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink className="nav-link" to="/">Home</NavLink>
               {
-                ValidetionHelper.isLogin() &&
-                <NavLink className="nav-link" to="/cart">CartList</NavLink>
-
+                ValidetionHelper.isLogin()?(
+                    <NavLink className="nav-link" to="/cart">CartList</NavLink>
+                ):(
+                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                )
               }
-              <NavLink className="nav-link" to="/products">Product List</NavLink>
             </Nav>
             {
               ValidetionHelper.isLogin()?(
-                <button className='btn btn-danger'>LogOut</button>
-              ):(<button className='btn btn-success'>Login</button>)
+                <button onClick={Logout} className='btn btn-danger'>LogOut</button>
+              ):(<NavLink className='btn btn-success' to='/login'>Login</NavLink>)
             }
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
           </div>
         </div>
       </div>
-
     );
 };
 

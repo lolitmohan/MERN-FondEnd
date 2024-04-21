@@ -1,5 +1,6 @@
-import React from 'react';
+
 import MasterLayout from '../components/MasterLayout';
+import LoginForm from "../components/LoginForm.jsx";
 
 const LoginPage = () => {
     return (
@@ -7,7 +8,7 @@ const LoginPage = () => {
             <div className="row">
                 <div className="col-12">
                     <MasterLayout>
-                        <h1>Login Page</h1>
+                        <LoginForm/>
                     </MasterLayout>
                 </div>
             </div>

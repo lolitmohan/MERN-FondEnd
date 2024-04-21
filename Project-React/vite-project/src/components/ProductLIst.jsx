@@ -1,34 +1,35 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import FullScreenLoader from './FullScreenLoader';
 import ValidetionHelper from './../utility/Validetion';
+import toast from "react-hot-toast";
 
 const ProductLIst = () => {
-
-
-
     let [data,SetData]=useState(null);
-
     useEffect(()=>{
-
         (async()=>{
             await CallProductList()
         })()
     },[])
-
     const CallProductList=async()=>{
-
         let res= await axios.get(`${ValidetionHelper.ApiBase}/product-list`)
-        
-
         let ProductsList=res.data['data'];
         SetData(ProductsList);
-    }    
+    }
 
-
-
-
-
+    const AddToCard=async (id)=>{
+        try{
+            let res=await axios.post(`${ValidetionHelper.ApiBase}/create-card/${id}`,ValidetionHelper.tokenHeader())
+            if(res.data['msg']==="success"){
+                toast.success('Request Complited')
+            }else{
+                toast.error('Request Complited')
+            }
+        }
+        catch (e){
+            ValidetionHelper.Unauthorized(e.response.status)
+        }
+    }
 
     return (
         <div>
@@ -39,7 +40,7 @@ const ProductLIst = () => {
                             data.map((item,i)=>{
                                 return(
                                 
-                                <div className="col-md-3">
+                                <div key={i} className="col-md-3">
                                     <div className="card p-3 mt-2">
                                     <img src={item['image']} alt="" />
                                     
@@ -52,10 +53,9 @@ const ProductLIst = () => {
                                         ) 
                                     }
                                     </h5>
-                                    
+                                        <button onClick={()=>{AddToCard(item['id'])}} className="btn btn-danger">Add to Card</button>
                                     </div>
                                 </div>
-                                
                                 )
                             })
                         }

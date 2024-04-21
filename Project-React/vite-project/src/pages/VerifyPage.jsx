@@ -1,5 +1,6 @@
-import React from 'react';
+
 import MasterLayout from '../components/MasterLayout';
+import VerifyForm from "../components/VerifyForm.jsx";
 
 const VerifyPage = () => {
     return (
@@ -7,7 +8,7 @@ const VerifyPage = () => {
             <div className="row">
                 <div className="col-12">
                     <MasterLayout>
-                        <h1>Verify Page</h1>
+                        <VerifyForm/>
                     </MasterLayout>
                 </div>
             </div>

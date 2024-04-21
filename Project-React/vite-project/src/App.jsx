@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import ProductListPage from './pages/ProductListPage';
 import VerifyPage from './pages/VerifyPage';
@@ -14,7 +14,6 @@ const App = () => {
       <HashRouter>
         <Routes>
           <Route path='/' element={<ProductListPage/>}/>
-          <Route path='/products' element={<ProductListPage/>}/>
           <Route path='/cart' element={<CartListPage/>}/>
           <Route path='*' element={<NotFoun/>}/>
         </Routes>
