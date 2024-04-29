@@ -1,0 +1,15 @@
+.footer{
+    background-color: rgb(81, 81, 81);
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.logo{
+    width: 60px;
+    height: auto;
+}
+.loder{
+    text-align: center;
+    margin: 80px 0;
+}

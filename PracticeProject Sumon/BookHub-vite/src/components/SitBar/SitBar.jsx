@@ -4,10 +4,7 @@ const SitBar = () => {
     return (
         <aside>
           <ul className="list-unstyled fs-6">
-            <li
-              className="bg-success p-3 m-1 text-white rounded-1"
-              role="button"
-            >
+            <li className="bg-success p-3 m-1 text-white rounded-1" role="button">
               <i className="bi bi-fire" /> All
             </li>
             <li className="p-3 m-1" role="button">
